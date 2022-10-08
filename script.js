@@ -1,14 +1,19 @@
 class ToDo {
     constructor() {
         this.container = document.body
-        this.tasks = [
-            {
-                text: "Wynieś śmieci"
-            }
-        ]
+        this.tasks = []
     }
 
-    init(){
+    init() {
+
+        fetchData('/data.json')
+            .then(this.loadTasks.bind(this))
+
+        this.render()
+    }
+
+    loadTasks(data) {
+        this.tasks = this.tasks.concat(data.tasks)
         this.render()
     }
 
