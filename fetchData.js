@@ -14,8 +14,8 @@ const fetchData = (url, options = {}) => {
         .finally(endCallback)
 }
 
-fetchData('./data.json')
-    .then((data) => console.log(data))
+// fetchData('./data.json')
+//     .then((data) => console.log(data))
 
-fetchData('./data2.json', { startCallback: () => console.log('Statr fetching data2.json')})
-    .then((data) => console.log(data))
+// fetchData('./data2.json', { startCallback: () => console.log('Statr fetching data2.json')})
+//     .then((data) => console.log(data))
